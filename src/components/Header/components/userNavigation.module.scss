@@ -1,0 +1,76 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.userNavigation {
+  align-self: stretch;
+  flex: 0 0 25%;
+  @include flexBox;
+  @include flexProperty(flex-end, center);
+  gap: 2.5rem;
+
+  & > * {
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+
+    %hoverBG {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+      top: -0.5rem;
+      left: -2.5rem;
+      border-radius: 1rem;
+      transition: all 0.2s;
+
+      @include respond(phone-small) {
+        top: -0.5rem;
+        left: -1.6rem;
+      }
+    }
+
+    &:not(:last-child) :before {
+      @extend %hoverBG;
+      width: 5rem;
+      height: 5rem;
+
+      @include respond(phone-small) {
+        height: 4rem;
+        width: 3.6rem;
+      }
+    }
+
+    &:last-child ::before {
+      @extend %hoverBG;
+      left: -1rem;
+      width: calc(100% + 2rem);
+      height: 5rem;
+      
+      @include respond(phone-small) {
+        height: 4rem;
+        top: -0.5rem;
+        left: -1rem;
+      }
+    }
+  }
+
+  & > *:hover ::before {
+    background: color('lightGreyColor-2');
+  }
+
+  .userNavIcon {
+    @include respond(phone-small) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  .userImage {
+    width: 3.75rem;
+    height: 3.75rem;
+
+    @include respond(phone-small) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}

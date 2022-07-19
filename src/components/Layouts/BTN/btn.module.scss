@@ -1,0 +1,13 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.underlineBtn {
+  @include flexBox;
+  @include flexProperty(flex-start, center);
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-size: size('smallerSize');
+  text-transform: capitalize;
+  color:color('darkGreyColor-1');
+  border-bottom: 2px solid color('pinkColor');
+  cursor: pointer;
+}

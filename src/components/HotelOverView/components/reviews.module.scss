@@ -1,0 +1,14 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.reviews {
+  flex: 1;
+  font-size: size('smallerSize');
+
+  .showAllBtn {
+    width: 8.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-weight: weight('boldWeight');
+  }
+}

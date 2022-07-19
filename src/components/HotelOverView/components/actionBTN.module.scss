@@ -1,0 +1,43 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.btn {
+  position: relative;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  @include linearGradient('lightPinkColor', 'darkPinkColor');
+  padding: 1rem 2rem;
+  line-height: 1.5;
+  color: color('whiteColor');
+  overflow: hidden;
+
+  %btn {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    transition: all 0.2s;
+  }
+
+  .btnText {
+    @extend %btn;
+  }
+
+  .btnInfoText {
+    @extend %btn;
+    position: absolute;
+    left: 0;
+    top: -120%;
+  }
+
+  &:hover {
+    @include linearGradient('lightPinkColor', 'darkPinkColor', to left);
+
+    .btnText {
+      transform: translateY(120%);
+    }
+
+    .btnInfoText {
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@use '../../styles/helpers/helpers' as *;
+
+.main {
+  @include flexBox;
+
+  @include respond(tab-portrate) {
+    flex-direction: column;
+  }
+}

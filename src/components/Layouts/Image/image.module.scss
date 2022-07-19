@@ -1,0 +1,22 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.userImageRound {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+
+  .image {
+    @include fitImage;
+    border-radius: inherit;
+  }
+}
+
+.userNamedRoundImage {
+  @include flexBox;
+  @include flexProperty(flex-start, center);
+  gap: 0.5rem;
+
+  .caption {
+    text-transform: capitalize;
+    font-weight: weight('regullarWeight');
+  }
+}

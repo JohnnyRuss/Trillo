@@ -1,0 +1,70 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.review {
+  position: relative;
+  padding: 3.5rem;
+  border-radius: 0.5rem;
+  background: color('whiteColor');
+  @include boxShadowBlack(2rem, 5rem, 0.1);
+  overflow: hidden;
+
+  &:not(:first-child) {
+    margin-top: 3rem;
+  }
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    z-index: 1;
+    top: -2.2rem;
+    left: 1rem;
+    font-size: 13rem;
+    line-height: 1;
+    opacity: 0.3;
+  }
+
+  @include respond(tab-portrate) {
+    padding: 2rem;
+  }
+
+  .reviewText {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .reviewUser {
+    @include flexBox;
+    @include flexProperty(space-between, center);
+    gap: 1rem;
+  }
+
+  .reviewUserImage {
+    width: 4.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+
+  .userReviewBox {
+    margin-right: auto;
+  }
+
+  .reviewUserName {
+    font-weight: weight('bolderWeight');
+    text-transform: uppercase;
+  }
+
+  .reviewDate {
+    font-weight: weight('thinWeight');
+    font-size: size('smallestSize');
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  .reviewRating {
+    font-size: size('bigSize');
+    color: color('pinkColor');
+  }
+}

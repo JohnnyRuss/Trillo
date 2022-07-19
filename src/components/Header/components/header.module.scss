@@ -1,0 +1,23 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.header {
+  height: 7rem;
+  @include flexBox;
+  @include flexProperty(space-between, center);
+  padding: 0 3rem;
+  font-size: size('smallSize');
+  border-bottom: 1px solid color('lightGreyColor-2');
+  background: color('whiteColor');
+
+  @include respond(phone-small) {
+    flex-wrap: wrap;
+    height: 10rem;
+    align-content: space-around;
+  }
+
+  .logo {
+    @include respond(phone-small) {
+      height: 3.5rem;
+    }
+  }
+}

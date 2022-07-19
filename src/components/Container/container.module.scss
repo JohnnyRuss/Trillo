@@ -1,0 +1,13 @@
+@use '../../styles/helpers/helpers' as *;
+
+.container {
+  max-width: $container-width;
+  margin: 8rem auto;
+  background: color('lightGreyColor-1');
+  @include boxShadowBlack(2rem, 6rem, 0.3);
+
+  @include respond(tab-landscape) {
+    margin: 0;
+    max-width: 100%;
+  }
+}

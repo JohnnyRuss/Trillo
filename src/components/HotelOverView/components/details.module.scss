@@ -1,0 +1,18 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.detailsContainer {
+  @include flexBox;
+  gap: 5rem;
+  padding: 4.5rem;
+  background: color('lightGreyColor-2');
+  border-top: 1px solid color('lightGreyColor-4');
+
+  @include respond(tab-portrate) {
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,8 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.sideBarNavigation {
+  flex: 0 0 20%;
+  @include flexBox(column);
+  font-size: size('smallerSize');
+  background: color('darkGreyColor-1');
+}

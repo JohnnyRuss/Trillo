@@ -1,0 +1,69 @@
+@use '../abstract/functions' as *;
+@use '../components/media' as *;
+@use '../abstract/mixins' as *;
+@use '../variables/custom' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-landscape) {
+    font-size: 56.25%; // 1rem == 9px
+  }
+
+  @include respond(tab-portrate) {
+    font-size: 50%; // 1rem == 8px
+  }
+
+  @include respond(large-desktop) {
+    font-size: 75%; // 1rem == 12px
+  }
+}
+
+body {
+  line-height: 1.6;
+  font-weight: weight('regullarWeight');
+  color: color('darkGreyColor-2');
+  font-family: 'Open Sans', sans-serif;
+  @include linearGradient('lightPinkColor', 'pinkColor');
+}
+
+@include scrollBar('body');
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+button {
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+::selection {
+  background: color('pinkColor');
+  color: color('lightGreyColor-1');
+}

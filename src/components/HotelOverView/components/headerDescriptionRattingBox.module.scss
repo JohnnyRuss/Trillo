@@ -1,0 +1,41 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.rattingBox {
+  align-self: stretch;
+  @include flexBox(column);
+  @include flexProperty(flex-start, center);
+  padding: 0.3rem 0.5rem;
+  margin-right: -2rem;
+  background: color('pinkColor');
+  color: color('whiteColor');
+
+  .avgRatting,
+  .avgRattingCount {
+    margin-top: -0.5rem;
+  }
+
+  .avgRatting {
+    font-size: size('bigSize');
+  }
+
+  .avgRattingCount {
+    font-size: size('smallestSize');
+  }
+
+  @include respond(phone-small) {
+    margin: 0;
+
+    .avgRatting,
+    .avgRattingCount {
+      margin-top: -0.2rem;
+    }
+
+    .avgRatting {
+      font-size: size('smallSize');
+    }
+
+    .avgRattingCount {
+      font-size: size('smallestSize');
+    }
+  }
+}

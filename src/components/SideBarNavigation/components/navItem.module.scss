@@ -1,0 +1,54 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.sideBarNavListItem {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.5rem;
+    transform: scaleY(0);
+    background: color('pinkColor');
+    transition: transform 0.15s, width 0.2s ease-out 0.15s;
+  }
+
+  &:hover::before {
+    width: 100%;
+    transform: scaleY(1);
+  }
+
+  .sideBarNavListLink:link,
+  .sideBarNavListLink:visited {
+    position: relative;
+    z-index: 1;
+    @include flexBox;
+    @include flexProperty(flex-start, center);
+    gap: 2rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+
+    @include respond(phone) {
+      gap: 1rem;
+    }
+  }
+
+  .sideBarNavListItemIcon {
+    width: 2rem;
+    height: 2rem;
+    fill: color('whiteColor');
+
+    @include respond(phone) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @include respond(phone-small) {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+  }
+}

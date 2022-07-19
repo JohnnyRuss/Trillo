@@ -1,0 +1,14 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.sideBarNavList {
+  @include flexBox(column);
+  gap: 0.5rem;
+  padding: 2.5rem 0;
+  color: color('whiteColor');
+
+  @include respond(tab-portrate) {
+    flex-direction: row;
+    @include flexProperty(space-evenly, center);
+    padding: 0;
+  }
+}

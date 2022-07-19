@@ -1,0 +1,18 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.description {
+  flex: 0 0 60%;
+  background: color('whiteColor');
+  @include boxShadowBlack(2rem, 5rem, 0.1);
+  font-size: size('smallerSize');
+  padding: 3.5rem;
+  border-radius: 0.5rem;
+
+  @include respond(tab-portrate) {
+    padding: 2rem;
+  }
+
+  .descriptionText {
+    margin-bottom: 1rem;
+  }
+}

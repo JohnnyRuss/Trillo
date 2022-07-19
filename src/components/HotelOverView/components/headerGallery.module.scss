@@ -1,0 +1,12 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.overViewGallery {
+  @include flexBox;
+
+  .galleryItemFigure {
+  }
+
+  .galleryItemImage {
+    @include fitImage;
+  }
+}

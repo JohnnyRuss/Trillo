@@ -1,0 +1,15 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.descriptionListItem {
+  @include flexBox;
+
+  .descriptionListItem p::first-letter {
+    text-transform: uppercase;
+  }
+
+  .listIcon {
+    width: 2rem;
+    height: 2rem;
+    fill: color('pinkColor');
+  }
+}

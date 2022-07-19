@@ -1,0 +1,13 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.legal {
+  font-size: size('smallestSize');
+  color: color('lightGreyColor-4');
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 2rem;
+
+  @include respond(tab-portrate) {
+    display: none;
+  }
+}

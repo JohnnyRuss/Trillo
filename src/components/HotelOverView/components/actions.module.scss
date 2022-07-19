@@ -1,0 +1,26 @@
+@use '../../../styles/helpers/helpers' as *;
+
+.actions {
+  padding: 3.5rem 0;
+  font-size: size('regullarSize');
+  text-align: center;
+
+  @include respond(tab-portrate) {
+    font-size: size('smallSize');
+  }
+
+  @include respond(phone) {
+    font-size: size('smallerSize');
+    padding: 3rem;
+  }
+
+  @include respond(phone-small) {
+    font-size: size('smallestSize');
+    padding: 2.5rem;
+  }
+
+  .bookNow {
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
